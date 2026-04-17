@@ -1,10 +1,5 @@
-import mysql.connector
+import sqlite3
 
 def connect_db():
-    conn = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="rajanandini@12",
-        database="ecommerce_db"
-    )
+    conn = sqlite3.connect("ecommerce.db", check_same_thread=False)
     return conn
